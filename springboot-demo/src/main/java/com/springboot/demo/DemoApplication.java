@@ -11,8 +11,5 @@ public class DemoApplication {
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(HelloWorldConfig.class);
 		HelloWorldService helloWorldService = (HelloWorldService) applicationContext.getBean("helloWorldService");
 		helloWorldService.printHelloWorld();
-		while (true){
-
-		}
 	}
 }

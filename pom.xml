@@ -6,6 +6,9 @@
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-build</artifactId>
 	<version>${revision}</version>
+	<modules>
+		<module>springboot-research</module>
+	</modules>
 	<packaging>pom</packaging>
 	<name>Spring Boot Build</name>
 	<description>Spring Boot Build</description>
@@ -29,6 +32,15 @@
 				<nohttp-checkstyle.version>0.0.1.RELEASE</nohttp-checkstyle.version>
 			</properties>
 			<build>
+				<resources>
+					<resource>
+						<directory>src/main/webapp</directory>
+						<targetPath>META-INF/resources</targetPath>
+						<includes>
+							<include>**/**</include>
+						</includes>
+					</resource>
+				</resources>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
